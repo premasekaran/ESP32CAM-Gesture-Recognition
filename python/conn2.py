@@ -2,12 +2,12 @@ import cv2
 import requests
 from cvzone.HandTrackingModule import HandDetector
 
-CAM_IP = "10.122.163.66"
+CAM_IP = "CAM_IP_ADD"
 
-LCD_IP = "10.122.163.8"
+LCD_IP = "LCD_IP_ADD"
 
 cap = cv2.VideoCapture(
-    f"http://10.122.163.66:81/stream"
+    f"http:CAM_IP_ADD:81/stream"
 )
 
 print("Opened:", cap.isOpened())
