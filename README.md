@@ -17,6 +17,7 @@ The ESP32-CAM streams live video over Wi-Fi to a Python application running on a
 - LCD output
 - Modular architecture
 
+---
 > HARDWARE
 ----------
 
@@ -25,6 +26,7 @@ The ESP32-CAM streams live video over Wi-Fi to a Python application running on a
 - 16x2 I2C LCD
 - Wi-Fi Router
 
+---
 > SOFTWARE
 -----------
 
@@ -34,12 +36,13 @@ The ESP32-CAM streams live video over Wi-Fi to a Python application running on a
 - Arduino IDE
 
 
+---
 > SYSTEM ARCHITECTURE
 
 ![Architecture](images/architecture.png)
 
----
 
+---
 > WORKFLOW
 -----------
 
@@ -50,7 +53,7 @@ The ESP32-CAM streams live video over Wi-Fi to a Python application running on a
 5. Python sends the label to ESP32.
 6. ESP32 displays it on the LCD.
 
-
+---
 > FOLDER STRUCTURE
 
 ```text
@@ -60,8 +63,9 @@ esp32/
 images/
 ```
 
-
+----
 > FUTURE IMPROVEMENTS
+----------------------
 
 - Support more gestures
 - Train a custom deep learning model
