@@ -17,16 +17,27 @@ The ESP32-CAM streams live video over Wi-Fi to a Python application running on a
 - LCD output
 - Modular architecture
 
+Recognized Gestures
 ---
+
+The system currently supports:
+
+Fist → "FIST"
+1 Finger → "ONE"
+2 Fingers → "TWO"
+3 Fingers → "THREE"
+4 Fingers → "FOUR"
+5 Fingers → "FIVE"
+
 > HARDWARE
-----------
+------------
 
-- ESP32-CAM
-- ESP32 DevKit
-- 16x2 I2C LCD
-- Wi-Fi Router
+ESP32-CAM (AI Thinker)
+ESP32 DevKit
+16x2 I2C LCD Display
+Wi-Fi Router
+Jumper wires and power supply
 
----
 > SOFTWARE
 -----------
 
@@ -46,22 +57,45 @@ The ESP32-CAM streams live video over Wi-Fi to a Python application running on a
 > WORKFLOW
 -----------
 
-1. ESP32-CAM captures video.
-2. Video is streamed to Python.
-3. OpenCV detects hand gestures.
-4. Gesture label is generated.
-5. Python sends the label to ESP32.
-6. ESP32 displays it on the LCD.
+ESP32-CAM initializes camera and starts streaming.
+Python script connects to the stream URL.
+Hand detection is performed frame-by-frame.
+Gesture label is generated in real time.
+Label is transmitted to ESP32.
+LCD updates with the detected gesture.
 
 ---
 > FOLDER STRUCTURE
 
 ```text
-esp32cam/
-python/
-esp32/
-images/
+project/ │── esp32cam/ # Code for ESP32-CAM streaming │── python/ # Python gesture detection scripts │── esp32/ # ESP32 LCD display + communication code │── images/ # Sample outputs or documentation images
 ```
+---
+RUN LOCALLY
+---
+1. Setup ESP32-CAM
+Open Arduino IDE
+Select board: AI Thinker ESP32-CAM
+Upload the camera streaming code
+Connect to Wi-Fi and note the stream URL (e.g., http://192.168.x.x)
+2. Setup Python Environment
+
+Install required libraries:
+
+pip install opencv-python cvzone numpy requests
+3. Run Gesture Detection
+Update the stream URL in your Python script:
+url = "http://192.168.x.x"
+Run the script:
+python main.py
+4. Setup ESP32 with LCD
+Connect I2C LCD to ESP32
+Upload the display + receiver code
+Ensure ESP32 is connected to the same Wi-Fi network
+5. Test the System
+Show hand gestures in front of ESP32-CAM
+Check detected gesture in Python window
+Verify output on LCD display
 
 ----
 > FUTURE IMPROVEMENTS
