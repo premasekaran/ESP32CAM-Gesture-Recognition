@@ -22,29 +22,29 @@ Recognized Gestures
 
 The system currently supports:
 
-Fist → "FIST"
-1. Finger → "ONE"
-2. Fingers → "TWO"
-3. Fingers → "THREE"
-4. Fingers → "FOUR"
-5. Fingers → "FIVE"
+1. Fist → "FIST"
+2. Finger → "ONE"
+3. Fingers → "TWO"
+4. Fingers → "THREE"
+5. Fingers → "FOUR"
+6. Fingers → "FIVE"
 
 > HARDWARE
 ------------
 
-1.ESP32-CAM (AI Thinker)
-2.ESP32 DevKit
-3.16x2 I2C LCD Display
-4.Wi-Fi Router
-5.Jumper wires and power supply
+1. ESP32-CAM (AI Thinker)
+2. ESP32 DevKit
+3. 16x2 I2C LCD Display
+4. Wi-Fi Router
+5. Jumper wires and power supply
 
 > SOFTWARE
 -----------
 
-- Python
-- OpenCV
-- cvzone
-- Arduino IDE
+1. Python
+2. OpenCV
+3. cvzone
+4. Arduino IDE
 
 
 ---
@@ -57,18 +57,22 @@ Fist → "FIST"
 > WORKFLOW
 -----------
 
-ESP32-CAM initializes camera and starts streaming.
-Python script connects to the stream URL.
-Hand detection is performed frame-by-frame.
-Gesture label is generated in real time.
-Label is transmitted to ESP32.
-LCD updates with the detected gesture.
+1. ESP32-CAM initializes camera and starts streaming.
+2. Python script connects to the stream URL.
+3. Hand detection is performed frame-by-frame.
+4. Gesture label is generated in real time.
+5. Label is transmitted to ESP32.
+6. LCD updates with the detected gesture.
 
 ---
 > FOLDER STRUCTURE
 
 ```text
-project/ │── esp32cam/ # Code for ESP32-CAM streaming │── python/ # Python gesture detection scripts │── esp32/ # ESP32 LCD display + communication code │── images/ # Sample outputs or documentation images
+project/
+│── esp32cam/ # Code for ESP32-CAM streaming
+│── python/ # Python gesture detection scripts
+│── esp32/ # ESP32 LCD display + communication code
+│── images/ # Sample outputs or documentation images
 ```
 ---
 RUN LOCALLY
