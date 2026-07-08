@@ -23,20 +23,20 @@ Recognized Gestures
 The system currently supports:
 
 Fist → "FIST"
-1 Finger → "ONE"
-2 Fingers → "TWO"
-3 Fingers → "THREE"
-4 Fingers → "FOUR"
-5 Fingers → "FIVE"
+1. Finger → "ONE"
+2. Fingers → "TWO"
+3. Fingers → "THREE"
+4. Fingers → "FOUR"
+5. Fingers → "FIVE"
 
 > HARDWARE
 ------------
 
-ESP32-CAM (AI Thinker)
-ESP32 DevKit
-16x2 I2C LCD Display
-Wi-Fi Router
-Jumper wires and power supply
+1.ESP32-CAM (AI Thinker)
+2.ESP32 DevKit
+3.16x2 I2C LCD Display
+4.Wi-Fi Router
+5.Jumper wires and power supply
 
 > SOFTWARE
 -----------
